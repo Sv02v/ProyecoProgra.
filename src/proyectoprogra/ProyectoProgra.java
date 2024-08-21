@@ -331,6 +331,26 @@ public class ProyectoProgra {
         int RegistroAlimentacion = 0;
         boolean entradaValida = false;
 
+        // Registro precargados
+            Alimentacion[] registrosPrecargados = {
+        new Alimentacion("León", "7:00 am", "Carne", "8 horas", 10),
+        new Alimentacion("Elefante", "12:00 pm", "Vegetales", "1 día", 300),
+        new Alimentacion("Hiena", "7:00 pm", "Carne", "8 horas", 8)
+    };
+
+    int registrosExistentes = registrosPrecargados.length;
+
+    // Mostramos los registros precargados
+    for (int i = 0; i < registrosExistentes; i++) {
+        JOptionPane.showMessageDialog(null,
+                "Registro " + (i + 1) +
+                "\nAnimal: " + registrosPrecargados[i].getNombreanimal() +
+                "\nHora de alimentación: " + registrosPrecargados[i].getHorario() +
+                "\nEste animal consume: " + registrosPrecargados[i].getAlimentos() +
+                "\nEste animal come cada: " + registrosPrecargados[i].getFrecuenciaalimentacion() +
+                "\nEste animal come (kilos): " + registrosPrecargados[i].getCantidadalimento());
+    }
+
         // Validación de la cantidad de registros
         do {
             try {
